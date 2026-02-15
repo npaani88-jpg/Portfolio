@@ -508,12 +508,110 @@ footer {
 
 /* Responsive */
 @media (max-width: 768px) {
-    .hero h1 {
-        font-size: 3rem;
+
+    /* Logo Adjustments */
+    .logo {
+        transform: translate(-50%, -50%) scale(1.5) !important;
+        /* Smaller on mobile */
+        font-size: 1.2rem;
     }
 
+    body.scrolled .logo {
+        top: 15px !important;
+        left: 50% !important;
+        transform: translateX(-50%) scale(0.8) !important;
+        flex-direction: row;
+    }
+
+    .logo img {
+        height: 60px !important;
+        width: 60px !important;
+    }
+
+    body.scrolled .logo img {
+        height: 35px !important;
+        width: 35px !important;
+    }
+
+    /* Header */
     header {
+        height: auto;
+        padding: 0.8rem 3%;
+        justify-content: center;
+    }
+
+    /* Navigation */
+    .nav-links {
+        gap: 1rem;
+        font-size: 0.75rem;
+    }
+
+    body.scrolled .nav-links {
+        position: fixed;
+        top: 60px;
+        right: 5%;
+        flex-direction: column;
+        background: rgba(0, 0, 0, 0.9);
+        padding: 10px;
+        border: 1px solid var(--neon-cyan);
+    }
+
+    /* Hero Section */
+    .hero-content {
+        padding: 1.5rem !important;
+        width: 95% !important;
+        margin-top: 25vh !important;
+    }
+
+    .hero p {
+        font-size: 0.95rem !important;
+        margin-bottom: 1.5rem !important;
+    }
+
+    /* CTA Button */
+    .cta-button {
+        padding: 0.8rem 2rem;
+        font-size: 0.85rem;
+    }
+
+    /* Section Titles */
+    .section-title h2 {
+        font-size: 2rem !important;
+    }
+
+    /* Video Grid */
+    .video-grid {
+        grid-template-columns: 1fr !important;
+        gap: 1.5rem;
+    }
+
+    /* Filter Buttons */
+    .filters {
+        gap: 0.5rem;
+    }
+
+    .filter-btn {
+        padding: 0.6rem 1.2rem;
+        font-size: 0.75rem;
+    }
+
+    /* Contact */
+    .contact-info {
         flex-direction: column;
         gap: 1rem;
+    }
+
+    .contact-link {
+        padding: 0.8rem 2rem;
+        font-size: 0.85rem;
+    }
+
+    /* Portfolio Section */
+    .portfolio {
+        padding: 4rem 3%;
+    }
+
+    .contact {
+        padding: 4rem 3%;
     }
 }
