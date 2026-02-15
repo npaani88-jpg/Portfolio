@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Abhimanyu Dhusia - Video Editor</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Outfit:wght@300;500;700&family=Syncopate:wght@400;700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+
+
+
+
+    <div class="ambient-glow glow-1"></div>
+    <div class="ambient-glow glow-2"></div>
+
+    <header>
+        <nav>
+            <div class="logo">
+                <img src="logo.jpg" alt="Logo">
+                <span>Abhimanyu Dhusia</span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#work">Work</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="home" class="hero">
+        <div class="hero-content">
+
+            <p>Specializing in documentary, tech, and high-retention UGC content. I transform raw footage into
+                scroll-stopping stories with precision cuts, motion graphics, and impactful pacing.</p>
+            <a href="#work" class="cta-button">View My Work</a>
+        </div>
+    </section>
+
+    <section id="work" class="portfolio">
+        <div class="section-title">
+            <h2>My Projects</h2>
+            <div class="filters">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="ugc">UGC</button>
+                <button class="filter-btn" data-filter="faceless">Faceless</button>
+                <button class="filter-btn" data-filter="reels">Reels</button>
+            </div>
+        </div>
+        <div class="video-grid" id="video-grid">
+            <!-- Videos will be injected here by JS -->
+        </div>
+    </section>
+
+    <section id="contact" class="contact">
+        <div class="section-title">
+            <h2>Let's Collaborate</h2>
+            <p>Ready to take your content to the next level? Get in touch.</p>
+        </div>
+        <div class="contact-info">
+            <a href="mailto:abhimanyudhusia@gmail.com" class="contact-link">📧 abhimanyudhusia@gmail.com</a>
+            <a href="https://www.instagram.com/stillrain____/" target="_blank" class="contact-link">📷 Instagram</a>
+        </div>
+    </section>
+
+    <!-- Video Modal -->
+    <div id="video-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <div class="video-container">
+                <iframe id="video-frame" src="" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Abhimanyu Dhusia. All rights reserved.</p>
+    </footer>
+    <!-- Background Video -->
+    <video id="bg-video" autoplay muted loop playsinline>
+        <source src="bg-city.mp4" type="video/mp4">
+    </video>
+    <canvas id="bg-canvas"></canvas>
+
+    <!-- Three.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+
+    <!-- Scripts -->
+    <script src="cyberpunk-city.js"></script>
+    <script src="video-data.js"></script>
+    <script src="app.js"></script>
+</body>
+
+</html>
