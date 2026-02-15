@@ -511,16 +511,20 @@ footer {
 
     /* Logo Adjustments */
     .logo {
+        top: 55% !important;
+        /* Lower on mobile to prevent cutoff */
         transform: translate(-50%, -50%) scale(1.5) !important;
         /* Smaller on mobile */
         font-size: 1.2rem;
     }
 
     body.scrolled .logo {
-        top: 15px !important;
-        left: 50% !important;
-        transform: translateX(-50%) scale(0.8) !important;
+        top: 20px !important;
+        left: 3% !important;
+        /* Move to left, not center */
+        transform: translate(0, 0) scale(0.7) !important;
         flex-direction: row;
+        gap: 10px;
     }
 
     .logo img {
@@ -529,38 +533,48 @@ footer {
     }
 
     body.scrolled .logo img {
-        height: 35px !important;
-        width: 35px !important;
+        height: 30px !important;
+        width: 30px !important;
+    }
+
+    body.scrolled .logo span {
+        font-size: 0.9rem;
     }
 
     /* Header */
     header {
-        height: auto;
+        height: 70px;
         padding: 0.8rem 3%;
-        justify-content: center;
+        justify-content: flex-end;
+        /* Keep nav on right */
     }
 
     /* Navigation */
     .nav-links {
-        gap: 1rem;
-        font-size: 0.75rem;
+        gap: 0.8rem;
+        font-size: 0.7rem;
+        flex-direction: row !important;
+        /* Force horizontal */
     }
 
     body.scrolled .nav-links {
-        position: fixed;
-        top: 60px;
-        right: 5%;
-        flex-direction: column;
-        background: rgba(0, 0, 0, 0.9);
-        padding: 10px;
-        border: 1px solid var(--neon-cyan);
+        position: relative;
+        /* Don't float it */
+        top: auto;
+        right: auto;
+        flex-direction: row !important;
+        /* Stay horizontal */
+        background: transparent;
+        padding: 0;
+        border: none;
     }
 
     /* Hero Section */
     .hero-content {
         padding: 1.5rem !important;
         width: 95% !important;
-        margin-top: 25vh !important;
+        margin-top: 20vh !important;
+        /* Less space since logo is lower */
     }
 
     .hero p {
