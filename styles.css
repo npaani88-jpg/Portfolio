@@ -105,7 +105,7 @@ header {
 /* Logo - Initial State (Big & Centered) */
 .logo {
     position: fixed;
-    top: calc(260% - 100px);
+    top: 50vh;
     /* Reverted to higher position */
     left: 50%;
     transform: translate(-50%, -50%) scale(2.5);
@@ -511,7 +511,7 @@ footer {
 
     /* Logo Adjustments */
     .logo {
-        top: 55% !important;
+        top: 50vh !important;
         /* Lower on mobile to prevent cutoff */
         transform: translate(-50%, -50%) scale(1.5) !important;
         /* Smaller on mobile */
@@ -627,5 +627,43 @@ footer {
 
     .contact {
         padding: 4rem 3%;
+    }
+}
+
+/* Tablet / iPad Landscape (1024px) */
+@media (max-width: 1024px) {
+    .video-grid {
+        grid-template-columns: repeat(2, 1fr);
+        /* 2 columns on tablet */
+        gap: 1.5rem;
+    }
+
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+
+    .section-title h2 {
+        font-size: 2.5rem;
+    }
+
+    .logo {
+        font-size: 1.3rem;
+        /* Slightly smaller logo text */
+    }
+}
+
+/* Large Desktop (1440px+) */
+@media (min-width: 1440px) {
+    .hero-content {
+        max-width: 1300px;
+    }
+
+    .video-grid {
+        grid-template-columns: repeat(4, 1fr);
+        /* 4 columns on wide screens */
+    }
+
+    .hero h1 {
+        font-size: 4.5rem;
     }
 }
